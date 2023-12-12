@@ -1,0 +1,3 @@
+title: 'Client'
+icon: mdi:server-network
+navigation.redirect: /client/introduction

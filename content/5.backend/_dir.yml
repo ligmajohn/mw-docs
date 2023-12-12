@@ -1,0 +1,3 @@
+title: 'Backend'
+icon: mdi:server-network
+navigation.redirect: /backend/introduction
