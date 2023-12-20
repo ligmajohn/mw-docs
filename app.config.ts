@@ -1,9 +1,9 @@
 export default defineAppConfig({
   docus: {
     title: 'movie-web',
-    description: 'For all your media scraping needs',
+    description: 'Hosting documentation for movie-web',
     socials: {
-      github: 'movie-web/providers',
+      github: 'movie-web/movie-web',
     },
     image: '',
     aside: {
