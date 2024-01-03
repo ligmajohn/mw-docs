@@ -1,3 +1,4 @@
 title: 'Client'
-icon: mdi:server-network
+icon: mdi:monitor
 navigation.redirect: /client/introduction
+titleTemplate: '%s | Client'

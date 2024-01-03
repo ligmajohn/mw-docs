@@ -1,3 +1,4 @@
 title: 'Proxy'
-icon: mdi:server-network
+icon: mdi:connection
 navigation.redirect: /proxy/introduction
+titleTemplate: '%s | Proxy'
