@@ -1,0 +1,4 @@
+title: 'Extra'
+icon: mdi:apple-safari
+navigation.redirect: /extra/streaming
+titleTemplate: '%s | Extra'
