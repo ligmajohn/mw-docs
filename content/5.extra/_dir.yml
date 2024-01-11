@@ -1,0 +1,4 @@
+title: 'Extra'
+icon: mdi:information-variant-circle-outline
+navigation.redirect: /extra/streaming
+titleTemplate: '%s | Extra'

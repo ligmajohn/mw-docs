@@ -13,7 +13,6 @@ export default defineAppConfig({
       owner: 'movie-web',
       branch: 'master',
       dir: 'content',
-      edit: true,
     },
     aside: {
       level: 0,
