@@ -4,7 +4,7 @@ export default defineAppConfig({
     description:
       'movie-web is a free and open source streaming site, no ads, no tracking, no nonsense.',
     url: 'https://movie-web.github.io/docs',
-    image: '/cover.png',
+    image: '/docs/cover.png',
     socials: {
       github: 'movie-web/movie-web',
     },
