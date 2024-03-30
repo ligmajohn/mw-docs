@@ -1,9 +1,31 @@
-import { defineTheme, directory, group, link } from '@neato/guider/theme';
+import { defineTheme, directory, group, link, social } from '@neato/guider/theme';
 import { Logo } from './components/Logo';
  
 export default defineTheme({
+  github: "movie-web/movie-web",
+  contentFooter: {
+    text: "Made with 💜",
+    editRepositoryBase: "https://github.com/movie-web/docs/blob/master",
+    socials: [
+      social.github("https://github.com/movie-web"),
+      social.discord("https://movie-web.github.io/links/discord"),
+    ]
+  },
   settings: {
-    logo: () => <Logo />
+    logo: () => <Logo />,
+    colors: {
+      "primary": "#A476D9",
+      "primaryLighter": "#C4ADDE",
+      "primaryDarker": "#6E23C3",
+      "background": "#0C0B13",
+      "backgroundLighter": "#1A1726",
+      "backgroundLightest": "#282438",
+      "backgroundDarker": "#000000",
+      "line": "#37334C",
+      "text": "#8C899A",
+      "textLighter": "#A6A4AE",
+      "textHighlight": "#fff"
+    }
   },
   directories: [
     directory("main", {
