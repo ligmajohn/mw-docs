@@ -13,18 +13,18 @@ Meaning users **do not** have to set up a new account; you can use your previous
 
 ## Metrics
 
-The backend exposes an endpoint for [Prometheus metrics](https://prometheus.io/){target="\_blank"} which allows you to keep track of the backend more easily, it can be accessed on `/metrics`.
-To view these metrics properly, you'll need to use an analytics program like [Grafana](https://grafana.com/){target="\_blank"}, [which can visualize logs from Prometheus](https://prometheus.io/docs/visualization/grafana/){target="\_blank"}.
+The backend exposes an endpoint for [Prometheus metrics](https://prometheus.io/) which allows you to keep track of the backend more easily, it can be accessed on `/metrics`.
+To view these metrics properly, you'll need to use an analytics program like [Grafana](https://grafana.com/), [which can visualize logs from Prometheus](https://prometheus.io/docs/visualization/grafana/).
 
 ## Security
 
 Optionally, there are a few security settings:
 
-- [Recaptcha support](2.configuration.md#captcha), the server can verify Recaptcha v3 tokens on register and login.
-- [Ratelimits](2.configuration.md#ratelimits), some expensive endpoints have ratelimits, but only when enabled. This requires an additional redis connection.
+- [Recaptcha support](./configuration.mdx#captcha), the server can verify Recaptcha v3 tokens on register and login.
+- [Ratelimits](./configuration.mdx#ratelimits), some expensive endpoints have ratelimits, but only when enabled. This requires an additional redis connection.
 
 ## Migrations
 
 Migrations help keep your database schema in sync with everyone else. To run migrations, you can use the `pnpm migration:up` command inside the docker container or in your command-line if you're not using docker.
 
-Alternatively, you can enable the [`postgres.migrateOnBoot`](2.configuration.md#postgresmigrateonboot) variable and it will be automatically migrated on boot.
+Alternatively, you can enable the [`postgres.migrateOnBoot`](./configuration.mdx#postgresmigrateonboot) variable and it will be automatically migrated on boot.

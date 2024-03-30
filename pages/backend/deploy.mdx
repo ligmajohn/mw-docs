@@ -6,15 +6,15 @@ title: 'Deploy'
 
 The only officially recognized hosting method is through Docker (or similar container runtimes). It can be scaled horizontally to all your heart's content and is the safest way to host the backend.
 
-For configuration, check out the [configuration reference](2.configuration.md).
+For configuration, check out the [configuration reference](./configuration.mdx).
 
-::alert{type="info"}
-The postgres database will need to be populated with [migrations](0.introduction.md#migrations) if `postgres.migrateOnBoot` isn't enabled.
-::
+<Note>
+The postgres database will need to be populated with [migrations](./introduction.mdx#migrations) if `postgres.migrateOnBoot` isn't enabled.
+</Note>
 
 ## Method 1 - Docker Deployment
 
-This method provides a straightforward setup with minimal configuration. For more extensive customization, see the [Configuration Reference](2.configuration.md).
+This method provides a straightforward setup with minimal configuration. For more extensive customization, see the [Configuration Reference](./configuration.mdx).
 
 **Prerequisites**
 

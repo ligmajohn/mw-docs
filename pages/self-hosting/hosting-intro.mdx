@@ -4,9 +4,9 @@ title: 'Start self-hosting'
 
 # How to self-host
 
-::alert{type="info"}
-We provide support on a case-by-case basis. If you have any questions, feel free to ask in our [Discord server](https://movie-web.github.io/links/discord).
-::
+<Note>
+  We provide support on a case-by-case basis. If you have any questions, feel free to ask in our [Discord server](https://movie-web.github.io/links/discord).
+</Note>
 
 Since movie-web has many different components, there are a few configurations of how you can host it. Each of these configurations has their own benefits, whether that be having complete control over your data or customizing your experience.
 **If you don't know what to choose, go with [method 1.](#method-1---only-host-the-frontend)**
@@ -16,21 +16,21 @@ Since movie-web has many different components, there are a few configurations of
 With this method, you only host the essential parts that make movie-web work. But keep using the account server from official movie-web.
 This method is the easiest to self-host and is recommended for most users.
 
-1. [Set up the Proxy!](../2.proxy/1.deploy.md)
-2. [Set up the Client!](../3.client/1.deploy.md)
+1. [Set up the Proxy!](../proxy/deploy.mdx)
+2. [Set up the Client!](../client/deploy.mdx)
 
 ## Method 2 - Only host the account server
 
 If you want to own your own data, it's possible to self-host just the account server and nothing else.
 This method is only recommended if you have experience hosting databases or other similar stateful applications.
 
-1. [Set up the Backend!](../4.backend/1.deploy.md)
-2. [Configure the Client!](../3.client/1.deploy.md)
+1. [Set up the Backend!](../backend/deploy.mdx)
+2. [Configure the Client!](../client/deploy.mdx)
 
 ## Method 3 - Host everything
 
 If you want an instance that's completely isolated from the official movie-web. You can self-host all of the parts yourself, though this method is not recommended for inexperienced hosters.
 
-1. [Set up the Proxy!](../2.proxy/1.deploy.md)
-2. [Set up the Backend!](../4.backend/1.deploy.md)
-3. [Set up the Client!](../3.client/1.deploy.md)
+1. [Set up the Proxy!](../proxy/deploy.mdx)
+2. [Set up the Backend!](../backend/deploy.mdx)
+3. [Set up the Client!](../client/deploy.mdx)

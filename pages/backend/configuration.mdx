@@ -12,10 +12,10 @@ The backend can be configured in 3 different ways:
 
 These different config options are all mutually inclusive, so you can use multiple at the same time if you want to.
 
-::alert{type="warning"}
+<Warning>
 With any of these configurations, you have to have atleast three variables set for the server to function:
 [`postgres.connection`](#postgresconnection), [`crypto.sessionSecret`](#cryptosessionsecret) and [`meta.name`](#metaname)
-::
+</Warning>
 
 ### Method 1 - `config.json`
 
@@ -90,13 +90,13 @@ Controls whether the server should trust Cloudflare IP headers. This is used to 
 
 Prefix for which path is being listened on. Useful if you're hosting on `example.com/backend` for example.
 
-::alert{type="info"}
+<Note>
 If this is set, you shouldn't apply URL rewriting before proxying.
-::
+</Note>
 
 ## Logging
 
-All configurations related to how the HTTP server will log. This is not related to the [metrics](0.introduction.md#metrics) endpoint.
+All configurations related to how the HTTP server will log. This is not related to the [metrics](./introduction.mdx#metrics) endpoint.
 
 ### `logging.format`
 
@@ -116,20 +116,20 @@ All configurations related to how postgres functions.
 
 Connection URL for postgres instance, should contain the database in the URL.
 
-::alert{type="danger"}
+<Caution>
 **Required. The backend will not start if this is not configured.**
-::
+</Caution>
 
 ### `postgres.migrateOnBoot`
 
 - Type: `boolean`
 - Default: `false`
 
-Run all [migrations](0.introduction.md#migrations) that haven't ran yet on boot.
+Run all [migrations](./introduction.mdx#migrations) that haven't ran yet on boot.
 
-::alert{type="warning"}
+<Warning>
 If you have multiple replicas running, this can cause a lot of issues. We recommend only using this if you run only one replica.
-::
+</Warning>
 
 ### `postgres.debugLogging`
 
@@ -138,9 +138,9 @@ If you have multiple replicas running, this can cause a lot of issues. We recomm
 
 Log all postgres queries in the console. Useful for debugging issues with the database.
 
-::alert{type="warning"}
+<Warning>
 This outputs sensitive, **DO NOT** run it in production.
-::
+</Warning>
 
 ### `postgres.ssl`
 
@@ -159,9 +159,9 @@ All configurations related to cryptography.
 
 The secret used to sign sessions. **Must be at least 32 characters long.**
 
-::alert{type="danger"}
+<Caution>
 **Required. The backend will not start if this is not configured.**
-::
+</Caution>
 
 ## Meta
 
@@ -174,9 +174,9 @@ These options configure how the server will display itself to the frontend.
 
 The name of the backend instance, this will be displayed to users who try to create an account.
 
-::alert{type="danger"}
+<Caution>
 **Required. The backend will not start if this is not configured.**
-::
+</Caution>
 
 ### `meta.description`
 
@@ -195,11 +195,11 @@ All configurations related to adding captcha functionality. Captchas' help to pr
 - Type: `boolean`
 - Default: `false`
 
-Enables [Recaptcha](https://www.google.com/recaptcha/about/) support for user registration and login. [You can follow this guide to create a Recaptcha key](https://cloud.google.com/recaptcha-enterprise/docs/create-key-website#create-key){target="\_blank"}.
+Enables [Recaptcha](https://www.google.com/recaptcha/about/) support for user registration and login. [You can follow this guide to create a Recaptcha key](https://cloud.google.com/recaptcha-enterprise/docs/create-key-website#create-key).
 
-::alert{type="warning"}
+<Warning>
 If this is enabled, all other captcha related settings are required.
-::
+</Warning>
 
 ### `captcha.secret`
 
@@ -221,9 +221,9 @@ If this is enabled, all other captcha related settings are required.
 
 All configuration options related to adding ratelimiting functionality. Helps to protect against bot attacks or spammy users.
 
-::alert{type="info"}
+<Note>
 Make sure your IP headers are properly forwarded if you're using a reverse proxy. Also see [`server.trustProxy`](#servertrustproxy).
-::
+</Note>
 
 ### `ratelimits.enabled`
 
@@ -232,9 +232,9 @@ Make sure your IP headers are properly forwarded if you're using a reverse proxy
 
 Enables ratelimiting some more expensive endpoints.
 
-::alert{type="warning"}
+<Warning>
 If this is enabled, all other ratelimit related settings are required.
-::
+</Warning>
 
 ### `ratelimits.redisUrl`
 

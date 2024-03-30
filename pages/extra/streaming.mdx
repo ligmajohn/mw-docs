@@ -23,16 +23,16 @@ This method is recommended if you want to host a proxy for your friends and or f
 
 {/* This method is recommended if you want to host a proxy for your friends and family to use, or if you want to use movie-web on a device that doesn't support the [browser extension](#method-1---browser-extension), such as a smart TV or mobile device.*/}
 
-1. Set up a proxy using one of our [guides](../2.proxy/1.deploy.md#deploying-the-proxy), [though we recommend Netlify](../2.proxy/1.deploy.md#method-1---netlify-easy).  
+1. Set up a proxy using one of our [guides](../proxy/deploy.mdx#deploying-the-proxy), [though we recommend Netlify](../proxy/deploy.mdx#method-1---netlify-easy).  
 2. Once that's done, go to the **Connections** section of the **Settings page** on your movie-web instance of chocie. 
 3. Enable `Use custom proxy workers` if it's not already enabled.  
 4. Add a new custom proxy by clicking `Add new worker`.
 5. Copy the URL of the proxy you deployed before, and paste it into the empty text box.
 ![Example of settings page](/assets/proxy-url-example.gif)
 
-::alert{type="info"}
-If you're self-hosting the client, you can use the [`VITE_CORS_PROXY_URL`](../3.client/3.configuration.md#vite_cors_proxy_url) variable to set the proxy URL for everyone who uses your client.
-::
+<Note>
+If you're self-hosting the client, you can use the [`VITE_CORS_PROXY_URL`](../client/configuration.mdx#vite_cors_proxy_url) variable to set the proxy URL for everyone who uses your client.
+</Note>
 
 ## Method 2 - Public proxy
 
@@ -40,4 +40,4 @@ The public proxy is the easiest way to get started with movie-web as it is the d
 
 If you are using the main website, then you are most likely already using the public proxy. Unfortunately you will most likely be getting slower speeds and your video might be buffering more often, which is why we recommend using a self-hosted proxy if you can.
 
-This is not the case with self-hosted clients, there is no proxy set up by default on self-hosted clients and you will need to [set up one yourself](../2.proxy/1.deploy.md).
+This is not the case with self-hosted clients, there is no proxy set up by default on self-hosted clients and you will need to [set up one yourself](../proxy/deploy.mdx).

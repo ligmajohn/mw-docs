@@ -36,11 +36,11 @@ window.__CONFIG__ = {
 - Type: `string`
 - Default: `""`
 
-This is the **read** API key from TMDB to allow movie-web to search for media. [Get one by following our guide](/client/tmdb).
+This is the **read** API key from TMDB to allow movie-web to search for media. [Get one by following our guide](./tmdb.mdx).
 
-::alert{type="danger"}
+<Caution>
 **Required. The client will not work properly if this is not configured.**
-::
+</Caution>
 
 ### `VITE_CORS_PROXY_URL`
 
@@ -48,16 +48,16 @@ This is the **read** API key from TMDB to allow movie-web to search for media. [
 - Default: `""`
 - Example: `"https://example1.example.com,https://example2.example.com"`
 
-This is where you put proxy URLs. [Get some by following our guides](/proxy/deploy).
+This is where you put proxy URLs. [Get some by following our guides](../proxy/deploy.mdx).
 
 If left empty, the client onboarding will not provide a "default setup" and the user will have to manually configure their own proxy or use the extension.
 
 You can add multiple Workers by separating them with a comma, they will be load balanced using round robin method on the client.
 **Worker URL entries must not end with a slash.**
 
-::alert{type="danger"}
+<Caution>
 **Required. The client will not work properly if this is not configured.**
-::
+</Caution>
 
 ### `VITE_DMCA_EMAIL`
 
@@ -73,7 +73,7 @@ This is the DMCA email for on the DMCA page. If this config value is present, a 
 - Default: `false`
 
 The application has two routing modes: hash-router and history-router.
-Hash router means that every page is linked with a hash like so: <code style="overflow-wrap: anywhere">https://example.com/#/browse</code>.
+Hash router means that every page is linked with a hash like so: `https://example.com/#/browse`.
 
 History router does routing without a hash like so: `https://example.com/browse`, this looks a lot nicer, but it requires that your hosting environment supports Single-Page-Application (SPA) redirects (Vercel supports this feature). If you don't know what that means, don't enable this.
 
@@ -87,7 +87,7 @@ Setting this configuration value to `true` will enable the history-router.
 
 This is the URL for the movie-web backend server which handles cross-device syncing.
 
-The backend server can be found at https://github.com/movie-web/backend and is offered as a [Docker](https://docs.docker.com/get-started/overview/){target="\_blank"} image for deployment.
+The backend server can be found at https://github.com/movie-web/backend and is offered as a [Docker](https://docs.docker.com/get-started/overview/) image for deployment.
 
 Backend URL must **not** end with a slash.
 
@@ -144,7 +144,7 @@ The list is comma separated, you can add as many as needed.
 
 - Type: `string`
 - Default: `""`
-- Example: <code style="overflow-wrap: anywhere">"google.com:example.com,123movies.com:flixhq.to"</code>
+- Example: `"google.com:example.com,123movies.com:flixhq.to"`
 
 Sometimes you want to proxy a CDN. This is how you can easily replace a CDN URL with your own.
 
@@ -155,15 +155,15 @@ The format is `<beforeA>:<afterA>,<beforeB>:<afterB>,...`
 - Type: `string`
 - Default: `""`
 
-The [Turnstile key](https://dash.cloudflare.com/sign-up?to=/:account/turnstile){target="\_blank"} for Cloudflare captchas. It's used to authenticate requests to proxy workers (or providers API).
+The [Turnstile key](https://dash.cloudflare.com/sign-up?to=/:account/turnstile) for Cloudflare captchas. It's used to authenticate requests to proxy workers (or providers API).
 
-[The proxy workers will need to be configured to accept these captcha tokens](../2.proxy/2.configuration.md#turnstile_secret), otherwise it has no effect for security.
+[The proxy workers will need to be configured to accept these captcha tokens](../proxy/configuration.mdx#turnstile_secret), otherwise it has no effect for security.
 
 ## Config reference - Environment Variables Only
 
-::alert{type="danger"}
-:icon{name="material-symbols:warning-rounded"} These configuration keys are specific to environment variables, they **only** work as environment variables **set at build time**.
-::
+<Caution>
+These configuration keys are specific to environment variables, they **only** work as environment variables **set at build time**.
+</Caution>
 
 ### `VITE_PWA_ENABLED`
 
@@ -173,9 +173,9 @@ The [Turnstile key](https://dash.cloudflare.com/sign-up?to=/:account/turnstile){
 Set to `true` if you want to output a PWA application. Set to `false` or omit to get a normal web application.
 A PWA web application can be installed as an application to your phone or desktop computer, but can be tricky to manage and comes with a few footguns.
 
-::alert{type="warning"}
+<Warning>
 Make sure you know what you're doing before enabling this, it **cannot be disabled** after you've set it up once.
-::
+</Warning>
 
 ### `VITE_GA_ID`
 
@@ -200,8 +200,8 @@ The value must include the protocol (HTTP/HTTPS) but must **not** end with a sla
 - Type: `boolean`
 - Default: `false`
 
-Whether to enable [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch){target="\_blank"}, this allows a user to add a search engine to their browser. When enabling you **must** also set [`VITE_APP_DOMAIN`](#vite_app_domain).
+Whether to enable [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch), this allows a user to add a search engine to their browser. When enabling you **must** also set [`VITE_APP_DOMAIN`](#vite_app_domain).
 
-::alert{type="warning"}
-:icon{name="material-symbols:warning-rounded"} This field is case sensitive, make sure you use the correct casing.
-::
+<Warning>
+This field is case sensitive, make sure you use the correct casing.
+</Warning>
