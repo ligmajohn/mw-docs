@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@neato/guider':
-    specifier: ^0.1.4
-    version: 0.1.4(@types/react@18.2.73)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)(webpack@5.91.0)
+    specifier: ^0.1.5
+    version: 0.1.5(@types/react@18.2.73)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)(webpack@5.91.0)
   next:
     specifier: ^14.1.4
     version: 14.1.4(react-dom@18.2.0)(react@18.2.0)
@@ -236,8 +236,8 @@ packages:
       - supports-color
     dev: false
 
-  /@neato/guider@0.1.4(@types/react@18.2.73)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)(webpack@5.91.0):
-    resolution: {integrity: sha512-kdiQDFOWyX+llEiLhmuy/xqbpKbQSw0Qy3JTH5QQiwrKaFCKOdXfYiHSWWH+c1Jc9Ehu0074NpcV8Hhcf7D/Hw==}
+  /@neato/guider@0.1.5(@types/react@18.2.73)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)(webpack@5.91.0):
+    resolution: {integrity: sha512-0dmVOTWyEbHQwqXElOsMhYDnWMPIb84f8ZSIO+Bt0jhvRssSvnZtSDBJWBTdF198jIURWuG332vS9cBrKoEDig==}
     engines: {node: '>=20'}
     peerDependencies:
       next: '>=14.1.0'
