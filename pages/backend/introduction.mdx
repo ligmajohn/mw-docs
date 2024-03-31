@@ -1,0 +1,30 @@
+---
+title: 'Introduction'
+---
+
+# Introduction to the backend
+
+The backend is essentially just an account server. It handles user accounts, syncing, and other account related features.
+
+## Recommended Community Backend
+
+To keep consistency and compatibility between different instances our partner, [lonelil](https://github.com/lonelil), has kindly offered to host a movie-web backend with a copy of the original data from the now unavailable movie-web.app backend. You can access this backend at: `https://mw-backend.lonelil.com` and `https://mw-backend.lonelil.ru`
+Meaning users **do not** have to set up a new account; you can use your previous passphrase from movie-web, and all of your data will be there!
+
+## Metrics
+
+The backend exposes an endpoint for [Prometheus metrics](https://prometheus.io/) which allows you to keep track of the backend more easily, it can be accessed on `/metrics`.
+To view these metrics properly, you'll need to use an analytics program like [Grafana](https://grafana.com/), [which can visualize logs from Prometheus](https://prometheus.io/docs/visualization/grafana/).
+
+## Security
+
+Optionally, there are a few security settings:
+
+- [Recaptcha support](./configuration.mdx#captcha), the server can verify Recaptcha v3 tokens on register and login.
+- [Ratelimits](./configuration.mdx#ratelimits), some expensive endpoints have ratelimits, but only when enabled. This requires an additional redis connection.
+
+## Migrations
+
+Migrations help keep your database schema in sync with everyone else. To run migrations, you can use the `pnpm migration:up` command inside the docker container or in your command-line if you're not using docker.
+
+Alternatively, you can enable the [`postgres.migrateOnBoot`](./configuration.mdx#postgres-migrate-on-boot) variable and it will be automatically migrated on boot.

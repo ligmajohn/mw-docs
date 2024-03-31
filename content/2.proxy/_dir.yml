@@ -1,4 +1,0 @@
-title: 'Proxy'
-icon: mdi:connection
-navigation.redirect: /proxy/introduction
-titleTemplate: '%s | Proxy'

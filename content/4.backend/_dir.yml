@@ -1,4 +1,0 @@
-title: 'Backend'
-icon: mdi:database
-navigation.redirect: /backend/introduction
-titleTemplate: '%s | Backend'

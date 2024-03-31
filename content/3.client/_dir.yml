@@ -1,4 +1,0 @@
-title: 'Client'
-icon: mdi:monitor
-navigation.redirect: /client/introduction
-titleTemplate: '%s | Client'

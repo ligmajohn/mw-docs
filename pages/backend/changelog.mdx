@@ -1,0 +1,36 @@
+---
+title: 'Changelog'
+---
+
+# Version 1.3.1
+
+ - Fixed bug where "false" env variables weren't treated as false for booleans
+ - Added ARM support for hosted docker container
+ - Stopped using JSON for recaptcha verifications.
+
+# Version 1.3.0
+
+For this update, you will need to run migrations.
+
+ - proxy url syncing
+ - remove npm usage, replace with pnpm
+ - add postgresql ssl support
+
+# Version 1.2.0
+
+<Warning>
+For this update, you will need to run migrations.
+</Warning>
+
+- [Added option to trust Cloudflare IP headers for ratelimits](./configuration.mdx#server-trust-cloudflare)
+- Removed unused table
+- Optimized prometheus metrics, should make less indexes
+
+# Version 1.1.5
+
+- Prometheus metrics endpoint
+- Account creation/deletion endpoints
+- Endpoints for importing old account data
+- Endpoints for syncing data
+- [Ratelimit system](./configuration.mdx#ratelimits)
+- [Captcha system](./configuration.mdx#captcha)
