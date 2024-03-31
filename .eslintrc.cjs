@@ -1,8 +1,6 @@
 module.exports = {
-  root: true,
-  extends: ['plugin:@next/next/recommended', 'plugin:prettier/recommended'],
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 2020,
+  extends: ['next', 'plugin:prettier/recommended'],
+  rules: {
+    '@next/next/no-img-element': 'off',
   },
 };
