@@ -11,40 +11,50 @@ Keeping your instance up-to-date with the latest features and bug fixes can enha
 You can also setup a scheduled workflow to automatically update your instance. This will allow you to keep your instance up to date without manual intervention.
 
 To do this, you will need to follow the guide below...
-1. If you have not already, click [here](https://github.com/movie-web/movie-web/fork) to fork the movie-web Github repository.
-2. Paste the below file into your repository's root `/.github/workflows` directory
 
-```yaml
-# File: .github/workflows/sync.yml
-name: Sync fork
+<Warning>This upgrade method will only work if your repository is a fork!</Warning>
 
-permissions:
-  contents: write
+<Steps>
+  <Steps.Step>
+    If you have not already, click [here](https://github.com/movie-web/movie-web/fork) to fork the movie-web Github repository.
+  </Steps.Step>
+  <Steps.Step>
+    Paste the below file into your repository's root `/.github/workflows` directory
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
-
-jobs:
-  sync:
+    ```yaml
+    # File: .github/workflows/sync.yml
     name: Sync fork
-    runs-on: ubuntu-latest
-    if: ${{ github.event.repository.fork }}
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    permissions:
+      contents: write
 
-      - name: Sync fork
-        run: gh repo sync ${{ github.repository }}
-        env:
-          GH_TOKEN: ${{ github.token }}
+    on:
+      schedule:
+        - cron: "0 0 * * *"
+      workflow_dispatch:
 
-      - uses: gautamkrishnar/keepalive-workflow@v1
-```
+    jobs:
+      sync:
+        name: Sync fork
+        runs-on: ubuntu-latest
+        if: ${{ github.event.repository.fork }}
 
-3. Commit and push the changes to your repository.
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+
+          - name: Sync fork
+            run: gh repo sync ${{ github.repository }}
+            env:
+              GH_TOKEN: ${{ github.token }}
+
+          - uses: gautamkrishnar/keepalive-workflow@v1
+    ```
+  </Steps.Step>
+  <Steps.Step>
+    Commit and push the changes to your repository.
+  </Steps.Step>
+</Steps>
 
 Your instance should now be automatically updated to the latest version.
 
