@@ -74,17 +74,13 @@
    networks:
      movie-web-network:
        driver: bridge
-   
+    ```
     **Important:** 
-     * Replace `YourPasswordHere` with your secure database password.
-     * Generate a strong session secret and replace `32CharacterLongStringHere`.
-     ```
-     **Important:** 
-     * Replace `YourPasswordHere` with your secure database password.
-     * Generate a strong session secret and replace `32CharacterLongStringHere`.
-     * Replace `TMDBReadAPIKey` with your api key learn more [here](https://movie-web.github.io/docs/client/tmdb).
-     * replace `yourDomainHere` with whatever you'll be using to access your main site, like movie-web.app
-     * replace `meta__name` and `meta__description`
+    * Replace `YourPasswordHere` with your secure database password.
+    * Generate a strong session secret and replace `32CharacterLongStringHere`.
+    * Replace `TMDBReadAPIKey` with your api key learn more [here](../client/tmdb.mdx).
+    * replace `yourDomainHere` with whatever you'll be using to access your main site, like movie-web.app
+    * replace `meta__name` and `meta__description`
 2.  **Start the Backend:**  Open a terminal in the directory containing `docker-compose.yml` and execute:
 
     ```bash
