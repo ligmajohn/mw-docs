@@ -2,6 +2,7 @@ import { defineTheme, directory, group, link, social } from '@neato/guider/theme
 import { Logo } from './components/Logo';
 import { NextSeo } from 'next-seo';
 import coverUrl from "./public/cover.png"; 
+import faviconUrl from "./public/favicon.ico";
 
 export default defineTheme({
   github: "movie-web/movie-web",
@@ -15,19 +16,25 @@ export default defineTheme({
   },
   meta: (pageMeta) => (
     <NextSeo {...{
-      titleTemplate: '%s | movie-web',
-      title: pageMeta.title ?? "For all your movie and TV show needs",
+      title: `${pageMeta.title ?? "For all your movie and TV show needs"} | movie-web`,
       description: pageMeta.description ?? "movie-web is a free and open source streaming site, no ads, no tracking, no nonsense.",
       openGraph: {
         images: [{
           url: coverUrl.src,
         }],
-        title: pageMeta.title ?? "For all your movie and TV show needs",
+        title: `${pageMeta.title ?? "For all your movie and TV show needs"} | movie-web`,
         description: pageMeta.description ?? "movie-web is a free and open source streaming site, no ads, no tracking, no nonsense.",
       },
       twitter: {
         cardType: 'summary_large_image',
       },
+      additionalLinkTags: [
+        {
+          href: faviconUrl.src,
+          rel: "icon",
+          type: "image/x-icon",
+        }
+      ]
     }} />
   ),
   settings: {
