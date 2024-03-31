@@ -14,7 +14,7 @@ These different config options are all mutually inclusive, so you can use multip
 
 <Warning>
 With any of these configurations, you have to have atleast three variables set for the server to function:
-[`postgres.connection`](#postgresconnection), [`crypto.sessionSecret`](#cryptosessionsecret) and [`meta.name`](#metaname)
+[`postgres.connection`](#postgres-connection-⚠), [`crypto.sessionSecret`](#crypto-session-secret-⚠) and [`meta.name`](#meta-name-⚠)
 </Warning>
 
 ### Method 1 - `config.json`
@@ -67,7 +67,7 @@ Space separated list of allowed origins.
 - Type: `boolean`
 - Default: `false`
 
-If set to true, it allows any origin to access the site. This overwrites the [`server.cors`](#servercors) setting.
+If set to true, it allows any origin to access the site. This overwrites the [`server.cors`](#server-cors) setting.
 
 ### `server.trustProxy`
 
@@ -222,7 +222,7 @@ If this is enabled, all other captcha related settings are required.
 All configuration options related to adding ratelimiting functionality. Helps to protect against bot attacks or spammy users.
 
 <Note>
-Make sure your IP headers are properly forwarded if you're using a reverse proxy. Also see [`server.trustProxy`](#servertrustproxy).
+Make sure your IP headers are properly forwarded if you're using a reverse proxy. Also see [`server.trustProxy`](#server-trust-proxy).
 </Note>
 
 ### `ratelimits.enabled`

@@ -157,7 +157,7 @@ The format is `<beforeA>:<afterA>,<beforeB>:<afterB>,...`
 
 The [Turnstile key](https://dash.cloudflare.com/sign-up?to=/:account/turnstile) for Cloudflare captchas. It's used to authenticate requests to proxy workers (or providers API).
 
-[The proxy workers will need to be configured to accept these captcha tokens](../proxy/configuration.mdx#turnstile_secret), otherwise it has no effect for security.
+[The proxy workers will need to be configured to accept these captcha tokens](../proxy/configuration.mdx#turnstile-secret), otherwise it has no effect for security.
 
 ## Config reference - Environment Variables Only
 
@@ -191,7 +191,7 @@ The Google Analytics ID for tracking user behavior. If omitted, no tracking will
 - Default: `""`
 - Example: `"https://movie-web.app"`
 
-The domain where the app lives. Only required when having the [`VITE_OPENSEARCH_ENABLED`](#vite_opensearch_enabled) option enabled.
+The domain where the app lives. Only required when having the [`VITE_OPENSEARCH_ENABLED`](#vite-opensearch-enabled) option enabled.
 
 The value must include the protocol (HTTP/HTTPS) but must **not** end with a slash.
 
@@ -200,7 +200,7 @@ The value must include the protocol (HTTP/HTTPS) but must **not** end with a sla
 - Type: `boolean`
 - Default: `false`
 
-Whether to enable [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch), this allows a user to add a search engine to their browser. When enabling you **must** also set [`VITE_APP_DOMAIN`](#vite_app_domain).
+Whether to enable [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch), this allows a user to add a search engine to their browser. When enabling you **must** also set [`VITE_APP_DOMAIN`](#vite-app-domain).
 
 <Warning>
 This field is case sensitive, make sure you use the correct casing.
