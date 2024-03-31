@@ -1,6 +1,8 @@
 import { defineTheme, directory, group, link, social } from '@neato/guider/theme';
 import { Logo } from './components/Logo';
- 
+import { NextSeo } from 'next-seo';
+import coverUrl from "./public/cover.png"; 
+
 export default defineTheme({
   github: "movie-web/movie-web",
   contentFooter: {
@@ -11,6 +13,23 @@ export default defineTheme({
       social.discord("https://movie-web.github.io/links/discord"),
     ]
   },
+  meta: (pageMeta) => (
+    <NextSeo {...{
+      titleTemplate: '%s | movie-web',
+      title: pageMeta.title ?? "For all your movie and TV show needs",
+      description: pageMeta.description ?? "movie-web is a free and open source streaming site, no ads, no tracking, no nonsense.",
+      openGraph: {
+        images: [{
+          url: coverUrl.src,
+        }],
+        title: pageMeta.title ?? "For all your movie and TV show needs",
+        description: pageMeta.description ?? "movie-web is a free and open source streaming site, no ads, no tracking, no nonsense.",
+      },
+      twitter: {
+        cardType: 'summary_large_image',
+      },
+    }} />
+  ),
   settings: {
     logo: () => <Logo />,
     colors: {
