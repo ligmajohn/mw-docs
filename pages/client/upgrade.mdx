@@ -34,6 +34,8 @@ jobs:
     - uses: actions/checkout@v3
     - run: gh repo sync <OWNER>/<FORK> # Replace the placeholders within the < >
     - uses: gautamkrishnar/keepalive-workflow@v1
+    env:
+      GH_TOKEN: ${{ github.token }}
 ```
 
 3. Replace the `<OWNER>` placeholder with the GitHub username of the account that owns the fork.
