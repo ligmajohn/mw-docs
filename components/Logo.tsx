@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./Logo.module.css";
+import logoUrl from "../public/icon-light.png"
 
 export function Logo() {
   return (
@@ -7,7 +8,7 @@ export function Logo() {
       href="/"
       className={classes.logo}
     >
-      <img src="/icon-light.png" alt="Logo of movie-web" />
+      <img src={logoUrl.src} alt="Logo of movie-web" />
     </Link>
   );
 }
