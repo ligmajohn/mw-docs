@@ -6,11 +6,13 @@ title: 'Deploy'
 
 ## Method 1 - Vercel - Recommended
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmovie-web%2Fmovie-web%2Ftree%2Fmaster&env=VITE_CORS_PROXY_URL,VITE_TMDB_READ_API_KEY)
-
-1. Click the Deploy button.
+1. Click [here](https://github.com/movie-web/movie-web/fork) to fork the movie-web Github repository
+1. Click [here](https://vercel.com/) to go to Vercel
 1. Sign in using either a GitHub, GitLab, or Bitbucket.
-1. Follow the instructions to create a repository for movie-web.
+1. Clicking the "New Project" button on the top right of your dashboard and following the steps to create a new project for your self hosted version of movie web.
+1. After clicking it, you'll be presented with a list of Git repositories that the Git account you've signed up with has write access to. 
+![image](https://github.com/movie-web/docs/assets/115524074/f0186018-4499-4c29-9d04-f6c421811704)
+1. Select your own fork of the movie-web Github repository.
 1. Configure the environment variables:
 
    - `VITE_CORS_PROXY_URL`: Enter your proxy URL here. Make sure to not have a slash at the end of your URL.
@@ -20,7 +22,7 @@ title: 'Deploy'
    - `VITE_TMDB_READ_API_KEY`: Enter your TMDB Read Access Token here. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
 
    - `VITE_BACKEND_URL`: Only set if you have a self-hosted backend. Put in your backend URL. Check out [configuration reference](../client/configuration.mdx) for details. Make sure to not have a slash at the end of the URL.
-
+![Screenshot 2024-04-07 at 14-55-24 New Project – Vercel](https://github.com/movie-web/docs/assets/115524074/a584ac1d-6e15-4618-8bb2-988985def3e0)
 1. Click "Deploy"
 1. Congrats! You have your own version of movie-web hosted.
 1. You may wish to configure a custom domain - Please consult [the Vercel docs for how to do this](https://vercel.com/docs/getting-started-with-vercel/domains).
