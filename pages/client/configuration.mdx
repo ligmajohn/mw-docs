@@ -39,7 +39,7 @@ window.__CONFIG__ = {
 This is the **read** API key from TMDB to allow movie-web to search for media. [Get one by following our guide](./tmdb.mdx).
 
 <Caution>
-**Required. The client will not work properly if this is not configured.**
+  **Required. The client will not work properly if this is not configured.**
 </Caution>
 
 ### `VITE_CORS_PROXY_URL`
@@ -56,7 +56,7 @@ You can add multiple Workers by separating them with a comma, they will be load 
 **Worker URL entries must not end with a slash.**
 
 <Caution>
-**Required. The client will not work properly if this is not configured.**
+  **Required. The client will not work properly if this is not configured.**
 </Caution>
 
 ### `VITE_DMCA_EMAIL`
@@ -128,6 +128,13 @@ When onboarding is enabled using `VITE_HAS_ONBOARDING`. This link will be used t
 
 If omitted, this will still show the proxy onboarding screen, just without an documentation link for the proxy.
 
+### `VITE_ALLOW_AUTOPLAY`
+
+- Type: `boolean`
+- Default: `false`
+
+Whether to allow autoplay for users that use the host provided proxies.
+
 ### `VITE_DISALLOWED_IDS`
 
 - Type: `string`
@@ -162,7 +169,8 @@ The [Turnstile key](https://dash.cloudflare.com/sign-up?to=/:account/turnstile) 
 ## Config reference - Environment Variables Only
 
 <Caution>
-These configuration keys are specific to environment variables, they **only** work as environment variables **set at build time**.
+  These configuration keys are specific to environment variables, they **only**
+  work as environment variables **set at build time**.
 </Caution>
 
 ### `VITE_PWA_ENABLED`
@@ -174,7 +182,8 @@ Set to `true` if you want to output a PWA application. Set to `false` or omit to
 A PWA web application can be installed as an application to your phone or desktop computer, but can be tricky to manage and comes with a few footguns.
 
 <Warning>
-Make sure you know what you're doing before enabling this, it **cannot be disabled** after you've set it up once.
+  Make sure you know what you're doing before enabling this, it **cannot be
+  disabled** after you've set it up once.
 </Warning>
 
 ### `VITE_GA_ID`
@@ -203,5 +212,5 @@ The value must include the protocol (HTTP/HTTPS) but must **not** end with a sla
 Whether to enable [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch), this allows a user to add a search engine to their browser. When enabling you **must** also set [`VITE_APP_DOMAIN`](#vite-app-domain).
 
 <Warning>
-This field is case sensitive, make sure you use the correct casing.
+  This field is case sensitive, make sure you use the correct casing.
 </Warning>
